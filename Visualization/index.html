@@ -9,30 +9,57 @@
     <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 </head>
 <body>
-    <h1 class="visualization-header">Thống kê điểm thi môn học <span class="class-id"></span> kíp <span class="test-interval"></span> năm học <span class="school-year"></span></h1>
+    <h1 class="visualization-header">Thống kê điểm thi môn học <span class="subject_id"></span> kíp <span class="shift_exam"></span> năm học <span class="semester"></span></h1>
     <div class="visualization-main-container">
-        <h2 class="visualization-title">
+        <h2 class="section_header visualization-title">
             A. Biểu đồ thống kê
         </h2>
-        <div id="visualization-main" style="height: 300px; width: 100%;">
-
+        <h2 class="title-text">Phổ điểm thi của lớp <span class="subject_id"></span></h2>
+        <div id="chartContainer" style="height: 300px; width: 100%;">
+        </div>
+        <h2 class="title-text">Tỷ lệ điểm thi của sinh viên</h2>
+        <div id="chartDoughnut" style="height: 300px; width: 100%;">
         </div>
     </div>
     <div class="chart-comments">
-        <h2 class="chart-comments-tittle">
+        <h2 class="section_header chart-comments-title">
             B. Một số thống kê quan trọng.
         </h2>
-        <div class="chart-comments-overview">Thống kê điểm thi môn học <span class="class-id"></span> kíp <span class="test-interval"></span> năm học <span class="school-year"></span></div>
-        <div>
-            <div>- Có <span id="total"></span> sinh viên thi</div>
-            <div>- Điểm trung bình là <span id="average"></span> điểm</div>
-            <div>- Điểm trung vị là <span id="median"></span> điểm</div>
-            <div>- Điểm cao nhất là <span id="maximum-point"></span> điểm, điểm thấp nhất là <span id="minimum-point"></span> điểm</div>
-            <div>- Điểm có sô sinh viên đạt được nhiều nhất là <span id="most-student-gain"></span> điểm</div>
-            <div>- Số sinh viên nhỏ hơn 4 điểm là <span id="total-fail-point"></span> (chiếm <span id="fail-point-rate"></span>%)</div>
-            <div>- Số sinh viên có số điểm lớn hơn 8 điểm là <span id="total-excellent-point"></span> (chiếm <span id="excellent-point-rate"></span>%)</div>
+        <div class="chart-frequency">
+            <h3>Bảng tần số</h3>
+            <table id="frequencyTable" class="custom-frequency-table">
+                <tbody id="bodyRows">
+                </tbody>
+            </table>
         </div>
-        <span>Nhận xét: </span><div id="chart-comments-epilogue"></div>
+        <div class="chart-detail">
+            <h3>Một số chỉ số thống kê cơ bản</h3>
+            <table id="detailTable" class="custom-detail-table">
+                <thead>
+                    <tr>
+                        <th>Chỉ số thống kê cơ bản</th>
+                        <th>Giá trị</th>
+                        <th>Tỷ lệ phần trăm (%)</th>
+                    </tr>
+                </thead>
+                <tbody id="bodyRows">
+                </tbody>
+            </table>
+        </div>
+        <div class="chart-comments-detail">
+            <div class="section_header analyzed-content">Thống kê chi tiết điểm thi môn học <span class="subject_id"></span> kíp <span class="shift_exam"></span> năm học <span class="semester"></span>:</div>
+            <div class="analyzed-detail">
+                <div>Có <span class="bold_infor" id="total_score"></span> sinh viên thi</div>
+                <div>Điểm trung bình là <span class="bold_infor" id="mean_score"></span> điểm</div>
+                <div>Điểm trung vị là <span class="bold_infor" id="median_score"></span> điểm</div>
+                <div>Điểm cao nhất là <span class="bold_infor" id="max_score"></span> điểm, điểm thấp nhất là <span class="bold_infor" id="min_score"></span> điểm</div>
+                <div>Điểm có sô sinh viên đạt được nhiều nhất là <span class="bold_infor" id="score_highest_appearances"></span> điểm</div>
+                <div>Số sinh viên nhỏ hơn 4 điểm là <span class="bold_infor" id="total_scores_below_four"></span> (chiếm <span class="bold_infor" id="below_four_rate"></span>%)</div>
+                <div>Số sinh viên có số điểm lớn hơn 8 điểm là <span class="bold_infor" id="total_scores_above_eight"></span> (chiếm <span class="bold_infor" id="above_eight_rate"></span>%)</div>
+                <div>Số sinh viên không làm bài hoặc bỏ thi là <span class="bold_infor" id="number_unfinished_exam"></span> (chiếm <span class="bold_infor" id="unfinished_rate"></span>%)</div>
+            </div>
+        </div>
+        <span>Nhận xét: </span><div id="chart_comments_conclusion"></div>
     </div>
 <script src="./script.js"></script>
 </body>

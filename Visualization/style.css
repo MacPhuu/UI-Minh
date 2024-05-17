@@ -1,0 +1,62 @@
+.bold_infor {
+    font-weight: bold; 
+    font-size: larger;
+    color: #3738E2; 
+    padding: 2px;
+    margin: 2px;
+    border-radius: 3px;
+}
+.visualization-main-container > .section_header {
+    font-weight: 800;
+    font-size: 22px; 
+}
+.chart-comments > .section_header {
+    font-weight: 800;
+    font-size: 22px; 
+}
+.chart-comments > div > div > div {
+    margin-bottom: 10px; 
+}
+.chart-comments > h2 {
+    margin-bottom: 10px; 
+}
+.chart-comments-detail > .analyzed-detail {
+    margin-left: 30px;
+}
+.section_header {
+    font-weight: 550;
+    font-size: 18px; 
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+th {
+    background-color: #f2f2f2;
+}
+td:hover, th:hover {
+    background-color: #edecec;
+    color: #895bfd;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+.custom-detail-table {
+    width: 50%;
+    margin: 0 auto; 
+}
+.custom-frequency-table {
+    width: 80%;
+    margin: 0 auto; 
+}
+.title-text {
+    width: 100%; /* hoặc bất kỳ giá trị chiều rộng nào bạn muốn */
+    text-align: center;
+}
